@@ -21,14 +21,14 @@
     </url>
     
     <url>
-        <loc>jinhua.io/tags/</loc>
+        <loc>jinhua.io/about/</loc>
         <lastmod>2017-12-03T17:30:37.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>jinhua.io/about/</loc>
+        <loc>jinhua.io/tags/</loc>
         <lastmod>2017-12-03T17:30:37.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
