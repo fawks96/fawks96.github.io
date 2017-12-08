@@ -2,29 +2,8 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>jinhua.io/tags/Hexo/</loc>
-        <lastmod>2017-12-03T17:30:37.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>jinhua.io/tags/Blog/</loc>
-        <lastmod>2017-12-03T17:30:37.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>jinhua.io/tags/233/</loc>
-        <lastmod>2017-12-05T09:07:38.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>jinhua.io/tags/666/</loc>
-        <lastmod>2017-12-05T09:07:38.000Z</lastmod>
+        <loc>jinhua.io/tags/%E6%9D%82%E6%84%9F/</loc>
+        <lastmod>2017-12-08T13:27:43.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
