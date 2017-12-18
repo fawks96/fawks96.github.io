@@ -3,7 +3,14 @@
 
     <url>
         <loc>jinhua.io/tags/%E6%9D%82%E6%84%9F/</loc>
-        <lastmod>2017-12-12T06:40:10.000Z</lastmod>
+        <lastmod>2017-12-18T14:47:22.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>jinhua.io/tags/%E5%85%AB%E5%8D%A6/</loc>
+        <lastmod>2017-12-18T14:48:44.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
