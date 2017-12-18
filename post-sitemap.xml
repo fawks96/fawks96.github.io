@@ -7,8 +7,8 @@
     </url>
 
     <url>
-        <loc>jinhua.io/2017/12/18/List/</loc>
-        <lastmod>2017-12-18T14:48:44.000Z</lastmod>
+        <loc>jinhua.io/2017/12/18/%E4%B8%8D%E6%98%AF%E6%89%80%E6%9C%89%E7%9A%84%E5%96%84%E8%89%AF%E9%83%BD%E6%98%AF%E7%90%86%E6%89%80%E5%BD%93%E7%84%B6/</loc>
+        <lastmod>2017-12-18T15:40:47.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -16,7 +16,15 @@
 
     <url>
         <loc>jinhua.io/2017/12/18/%E5%B0%8F%E5%9C%88%E5%AD%90/</loc>
-        <lastmod>2017-12-18T14:47:22.000Z</lastmod>
+        <lastmod>2017-12-18T15:04:14.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>jinhua.io/2017/12/18/List/</loc>
+        <lastmod>2017-12-18T14:48:44.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
