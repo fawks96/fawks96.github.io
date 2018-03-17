@@ -7,6 +7,13 @@
     </url>
     
     <url>
+        <loc>jinhua.io/words/</loc>
+        <lastmod>2018-03-10T08:46:21.327Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
         <loc>jinhua.io/about/</loc>
         <lastmod>2018-02-23T05:36:05.396Z</lastmod>
         <changefreq>weekly</changefreq>
