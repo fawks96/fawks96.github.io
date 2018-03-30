@@ -16,13 +16,6 @@
     </url>
 
     <url>
-        <loc>jinhua.io/tags/%E5%85%AB%E5%8D%A6/</loc>
-        <lastmod>2018-02-09T16:22:29.246Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>jinhua.io/tags/%E9%9F%B3%E4%B9%90/</loc>
         <lastmod>2018-02-09T17:28:41.950Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -39,6 +32,13 @@
     <url>
         <loc>jinhua.io/tags/%E6%9D%82%E8%AE%B0/</loc>
         <lastmod>2018-03-17T03:50:22.775Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>jinhua.io/tags/%E5%85%AB%E5%8D%A6/</loc>
+        <lastmod>2018-03-30T02:16:46.200Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
