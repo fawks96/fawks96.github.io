@@ -136,13 +136,6 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
                             <a href="/archive/">Archives</a>
                         </li>
                         
@@ -151,6 +144,13 @@
                         
                         <li>
                             <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -200,11 +200,11 @@
             <!-- 标签云 -->
             <div id='tag_cloud' class="tags">
                 
-                    <a href="#杂感" title="杂感" rel="5">杂感</a>
-                
                     <a href="#八卦" title="八卦" rel="1">八卦</a>
                 
-                    <a href="#杂记" title="杂记" rel="12">杂记</a>
+                    <a href="#杂感" title="杂感" rel="5">杂感</a>
+                
+                    <a href="#杂记" title="杂记" rel="13">杂记</a>
                 
                     <a href="#音乐" title="音乐" rel="1">音乐</a>
                 
@@ -226,6 +226,28 @@
 
             <!-- 标签列表 -->
 
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="八卦">
+                    <span class="tag-text">八卦</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2017/12/18/List/">
+                        <h2 class="post-title">
+                            List
+                        </h2>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
             
             <div class="one-tag-list">
                 <span class="fa fa-tag listing-seperator" id="杂感">
@@ -318,8 +340,8 @@
             </div>
             
             <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="八卦">
-                    <span class="tag-text">八卦</span>
+                <span class="fa fa-tag listing-seperator" id="杂记">
+                    <span class="tag-text">杂记</span>
                 </span>
                 
                   <!-- <li class="listing-item">
@@ -327,22 +349,15 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
                  <div class="post-preview">
-                     <a href="/2017/12/18/List/">
+                     <a href="/2019/03/14/寒假社会实践——宜城之行（2019.2.14-2019.2.20）【6】/">
                         <h2 class="post-title">
-                            List
+                            寒假社会实践——宜城之行（2019.2.14-2019.2.20）【6】
                         </h2>
                         
                     </a>
                     <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
                 </div>
                 <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="杂记">
-                    <span class="tag-text">杂记</span>
-                </span>
                 
                   <!-- <li class="listing-item">
                   <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
