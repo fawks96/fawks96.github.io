@@ -2,6 +2,13 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
+        <loc>jinhua.io/tags/%E6%9D%82%E6%84%9F/</loc>
+        <lastmod>2017-12-18T15:44:46.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>jinhua.io/tags/%E5%AE%9E%E4%B9%A0/</loc>
         <lastmod>2017-12-31T12:20:11.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -11,13 +18,6 @@
     <url>
         <loc>jinhua.io/tags/%E9%9F%B3%E4%B9%90/</loc>
         <lastmod>2018-02-09T17:28:41.950Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>jinhua.io/tags/%E5%85%AB%E5%8D%A6/</loc>
-        <lastmod>2018-04-08T11:47:50.630Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -44,22 +44,8 @@
     </url>
 
     <url>
-        <loc>jinhua.io/tags/%E6%9D%82%E8%B0%88/</loc>
-        <lastmod>2018-07-25T11:19:31.234Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>jinhua.io/tags/%E8%BD%AC%E8%BD%BD/</loc>
         <lastmod>2018-07-31T11:36:28.438Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>jinhua.io/tags/%E6%9D%82%E6%84%9F/</loc>
-        <lastmod>2019-03-15T03:18:16.051Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
