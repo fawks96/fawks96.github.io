@@ -140,6 +140,13 @@
 
                         
                         <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
                             <a href="/about/">About</a>
                         </li>
                         
@@ -148,13 +155,6 @@
                         
                         <li>
                             <a href="/archive/">Archives</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
-                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
@@ -305,8 +305,11 @@
         </h3>
         <div class="post-content-preview">
             用SQLMAP对 acm.cs.ecnu.edu.cn 进行扫描，发现存在注入点：http://acm.cs.ecnu.edu.cn/bbsread.php?id=3635&amp;set=2
-![](/Users/fawks96/blog/themes/beantech/source/_posts/SQL Injection Attack Project/图片1.png)
-对其进行注入并读......
+
+对其进行注入并读取出网站的各个数据库名称：
+
+得出网站由三个数据库组成：acm、eoj、information_schema
+执行命令：&quot;./sqlmap.py -u “http://ac......
         </div>
     </a>
     
